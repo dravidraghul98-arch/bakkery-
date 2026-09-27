@@ -31,10 +31,11 @@ export const InstagramOrderSection: React.FC = () => {
             <div className="flex items-center gap-5">
               <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full p-1 bg-gradient-to-tr from-amber-400 via-pink-500 to-purple-600 shadow-md shrink-0">
                 <img
-                  src="/images/hero.png"
+                  src="./images/hero.png"
                   alt="Bakkings Elite Instagram Profile"
                   className="w-full h-full object-cover rounded-full border-2 border-white"
                 />
+
               </div>
 
               <div>

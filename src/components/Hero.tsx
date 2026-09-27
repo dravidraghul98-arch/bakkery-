@@ -11,10 +11,11 @@ export const Hero: React.FC = () => {
           {/* Main Showcase Banner Image */}
           <div className="relative w-full h-[320px] sm:h-[460px] md:h-[560px] lg:h-[620px] bg-white">
             <img
-              src="/images/hero.png"
+              src="./images/hero.png"
               alt="Bakkings Elite Luxury Blue and White Bakery Display"
               className="w-full h-full object-cover object-center"
             />
+
 
             {/* Bottom-left Pill Button Overlay - Exactly matching reference image */}
             <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10">
