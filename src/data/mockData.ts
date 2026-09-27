@@ -1,4 +1,5 @@
 import type { MenuItem, Review, InstagramPost } from '../types';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export const MENU_ITEMS: MenuItem[] = [
   {
@@ -12,7 +13,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isBestseller: true,
     rating: 5.0,
     reviewsCount: 128,
-    image: './images/wedding_cake.png',
+    image: getAssetUrl('images/wedding_cake.png'),
     weightOptions: ['2 kg', '3 kg', '5 kg', '10 kg Tier']
   },
   {
@@ -26,7 +27,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isBestseller: true,
     rating: 4.9,
     reviewsCount: 94,
-    image: './images/berry_gateau.png',
+    image: getAssetUrl('images/berry_gateau.png'),
     weightOptions: ['500g', '1 kg', '2 kg']
   },
   {
@@ -40,7 +41,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isBestseller: true,
     rating: 4.8,
     reviewsCount: 76,
-    image: './images/macarons.png',
+    image: getAssetUrl('images/macarons.png'),
     weightOptions: ['6 Pcs Box', '12 Pcs Tower', '24 Pcs Party Box']
   },
   {
@@ -54,7 +55,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isBestseller: false,
     rating: 4.7,
     reviewsCount: 52,
-    image: './images/pista_cookies.png',
+    image: getAssetUrl('images/pista_cookies.png'),
     weightOptions: ['250g Box', '500g Tin', '1 kg Gift Box']
   },
   {
@@ -68,7 +69,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isBestseller: true,
     rating: 4.9,
     reviewsCount: 110,
-    image: './images/veggie_panini.png',
+    image: getAssetUrl('images/veggie_panini.png'),
   },
   {
     id: '6',
@@ -81,7 +82,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isBestseller: true,
     rating: 5.0,
     reviewsCount: 88,
-    image: './images/hero.png',
+    image: getAssetUrl('images/hero.png'),
     weightOptions: ['1 kg', '2 kg', '3 kg']
   },
   {
@@ -95,7 +96,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isBestseller: false,
     rating: 4.8,
     reviewsCount: 41,
-    image: './images/hero.png',
+    image: getAssetUrl('images/hero.png'),
   },
   {
     id: '8',
@@ -108,7 +109,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isBestseller: false,
     rating: 4.9,
     reviewsCount: 65,
-    image: './images/hero.png',
+    image: getAssetUrl('images/hero.png'),
   }
 ];
 
@@ -158,7 +159,7 @@ export const REVIEWS: Review[] = [
 export const INSTAGRAM_POSTS: InstagramPost[] = [
   {
     id: '1',
-    imageUrl: './images/wedding_cake.png',
+    imageUrl: getAssetUrl('images/wedding_cake.png'),
     likes: '2.4k',
     comments: '184',
     caption: 'Royal blue sugar flowers on 4-tier pure white vanilla velvet. 💙 Head to DM to book your custom wedding cake!',
@@ -166,7 +167,7 @@ export const INSTAGRAM_POSTS: InstagramPost[] = [
   },
   {
     id: '2',
-    imageUrl: './images/berry_gateau.png',
+    imageUrl: getAssetUrl('images/berry_gateau.png'),
     likes: '1.9k',
     comments: '92',
     caption: 'Fresh Chennai blueberries + Chantilly cream = Weekend perfection! 🫐 Available for instant Swiggy order.',
@@ -174,7 +175,7 @@ export const INSTAGRAM_POSTS: InstagramPost[] = [
   },
   {
     id: '3',
-    imageUrl: './images/macarons.png',
+    imageUrl: getAssetUrl('images/macarons.png'),
     likes: '3.1k',
     comments: '240',
     caption: 'French macaron towers in sapphire & snow white. Order your party boxes directly via Instagram DM! 📲',
@@ -182,10 +183,11 @@ export const INSTAGRAM_POSTS: InstagramPost[] = [
   },
   {
     id: '4',
-    imageUrl: './images/pista_cookies.png',
+    imageUrl: getAssetUrl('images/pista_cookies.png'),
     likes: '1.5k',
     comments: '75',
     caption: 'Slow-baked butter cookies with roasted pistachios & white chocolate. Perfect tea time treat! ☕🍪',
     tag: '#Ekkaduthangal'
   }
 ];
+
