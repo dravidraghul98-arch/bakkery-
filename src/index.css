@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-script: 'Great Vibes', cursive;
+  }
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+/* Custom Luxury Blue & White Utilities */
+.bg-ice-blue {
+  background-color: #F0F7FF;
+}
+
+.bg-royal-navy {
+  background-color: #0A192F;
+}
+
+.text-royal-navy {
+  color: #0A192F;
+}
+
+.border-ice-blue {
+  border-color: #E2EFFC;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8;
+}
+
+/* Shimmer Loading Skeleton */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, #f0f7ff 25%, #e0f2fe 50%, #f0f7ff 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
