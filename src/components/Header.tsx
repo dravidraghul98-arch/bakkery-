@@ -11,6 +11,7 @@ export const Header: React.FC = () => {
     { name: 'Mousse & Gateaux', href: '#menu' },
     { name: 'Cheesecake', href: '#menu' },
     { name: 'Special Flavours', href: '#menu' },
+    { name: 'Order via WhatsApp/Insta', href: '#consultation' },
     { name: 'Reviews', href: '#reviews' },
     { name: 'Contact', href: '#location' },
   ];
