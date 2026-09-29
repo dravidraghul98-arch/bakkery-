@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
 import type { CategoryType } from '../types';
 import { MENU_ITEMS } from '../data/mockData';
-import { Heart, Search, Star, Sparkles } from 'lucide-react';
+import { Heart, Search, Star, Sparkles, Clock, CheckCircle2 } from 'lucide-react';
 
 export const MenuSection: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<CategoryType>('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [egglessOnly, setEgglessOnly] = useState(false);
   const [wishlist, setWishlist] = useState<string[]>([]);
-  const [selectedWeights, setSelectedWeights] = useState<{ [key: string]: string }>({});
 
   const categories: { id: CategoryType; name: string }[] = [
-    { id: 'all', name: 'All Bakes' },
-    { id: 'bread', name: 'Bread' },
-    { id: 'cakes', name: 'Cakes' },
-    { id: 'specialty', name: 'Specialty Cakes' },
-    { id: 'pastry', name: 'Pastry' },
-    { id: 'cookies', name: 'Cookies' },
-    { id: 'savory', name: 'Savory' },
+    { id: 'all', name: 'All Cakes' },
+    { id: 'fresh-cream', name: 'Fresh Cream' },
+    { id: 'choco-treats', name: 'Choco Treats' },
+    { id: 'fresh-cream-premium', name: 'Fresh Cream Premium' },
+    { id: 'mousse', name: 'Mousse' },
+    { id: 'special-gateaux', name: 'Special Gateaux' },
+    { id: 'fusion-special', name: 'Fusion Special' },
+    { id: 'cheesecake', name: 'Cheesecake' },
+    { id: 'special-flavours', name: 'Special Flavours' },
   ];
 
   const toggleWishlist = (id: string) => {
@@ -33,57 +33,69 @@ export const MenuSection: React.FC = () => {
     const matchesSearch =
       item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.description.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesEggless = !egglessOnly || item.isEggless;
-    return matchesCategory && matchesSearch && matchesEggless;
+    return matchesCategory && matchesSearch;
   });
 
   return (
-    <section id="menu" className="py-16 sm:py-24 bg-white">
+    <section id="menu" className="py-16 sm:py-24 bg-gradient-to-b from-slate-50/50 via-white to-blue-50/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Title */}
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-800 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest border border-blue-100">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
+          <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-900 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest border border-blue-100 shadow-xs">
             <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-            <span>Patisserie Collection</span>
+            <span>Exclusive Patisserie Collection</span>
           </div>
 
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-950 tracking-tight">
-            Explore Our <span className="text-blue-600">Patisserie Menu</span>
+            Our Custom <span className="text-blue-600">Cake Menu</span>
           </h2>
 
-          <p className="text-slate-600 text-base sm:text-lg font-light">
-            Custom celebration cakes, fresh artisan sourdough paninis, French macarons & slow-baked cookies in Ekkaduthangal.
+          <p className="text-slate-600 text-base sm:text-lg font-light leading-relaxed">
+            Handcrafted celebration cakes, cheesecakes, mousse & special gateaux in Ekkaduthangal, Chennai.
           </p>
+        </div>
+
+        {/* Global Notice Banner */}
+        <div className="mb-10 max-w-4xl mx-auto bg-gradient-to-r from-amber-500/10 via-blue-500/10 to-emerald-500/10 border border-blue-200/80 rounded-2xl p-4 sm:p-5 shadow-sm text-center flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3 text-left">
+            <div className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold shrink-0 shadow-md">
+              🎂
+            </div>
+            <div>
+              <h4 className="font-serif text-sm font-bold text-blue-950 flex items-center gap-2">
+                Important Ordering Information
+              </h4>
+              <p className="text-xs text-slate-600 font-medium mt-0.5">
+                Kindly place your cake orders <strong>1 day in advance</strong>. Both <strong>Egg & Eggless</strong> options are available for <strong>ALL flavors!</strong>
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 shrink-0">
+            <span className="bg-emerald-100 text-emerald-900 border border-emerald-300 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> Egg & Eggless
+            </span>
+            <span className="bg-amber-100 text-amber-900 border border-amber-300 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+              <Clock className="w-3.5 h-3.5 text-amber-600" /> 1 Day Advance
+            </span>
+          </div>
         </div>
 
         {/* Category Filter Bar & Search Controls */}
         <div className="mb-10 space-y-6">
-          {/* Top Control Bar: Search & Diet Toggle */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-blue-50/60 p-4 rounded-2xl border border-blue-100">
-            {/* Search Input */}
-            <div className="relative w-full sm:w-80">
+          {/* Top Control Bar: Search Input */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-white p-3 sm:p-4 rounded-2xl border border-blue-100 shadow-xs">
+            <div className="relative w-full">
               <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
               <input
                 type="text"
-                placeholder="Search cakes, paninis, cookies..."
+                placeholder="Search cake flavors (e.g. Rasamalai, Truffle, Blueberry Cheesecake...)"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 bg-white rounded-xl border border-blue-100 text-xs sm:text-sm font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-xs"
+                className="w-full pl-10 pr-4 py-2.5 bg-slate-50/80 rounded-xl border border-blue-100 text-xs sm:text-sm font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-xs"
               />
             </div>
-
-            {/* Eggless Filter Toggle */}
-            <label className="flex items-center gap-2.5 cursor-pointer bg-white px-4 py-2.5 rounded-xl border border-blue-100 shadow-xs hover:border-emerald-300 transition-colors">
-              <input
-                type="checkbox"
-                checked={egglessOnly}
-                onChange={(e) => setEgglessOnly(e.target.checked)}
-                className="w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 cursor-pointer"
-              />
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="text-xs sm:text-sm font-semibold text-slate-700">100% Eggless Only</span>
-            </label>
           </div>
 
           {/* Category Tabs */}
@@ -92,10 +104,10 @@ export const MenuSection: React.FC = () => {
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap transition-all duration-300 ${
+                className={`px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap transition-all duration-300 ${
                   activeCategory === cat.id
                     ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20 scale-105'
-                    : 'bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-blue-900 border border-slate-200/60'
+                    : 'bg-white hover:bg-blue-50 text-slate-700 hover:text-blue-900 border border-slate-200'
                 }`}
               >
                 {cat.name}
@@ -104,15 +116,14 @@ export const MenuSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Product Cards Grid - Price & Online Order Buttons Removed */}
+        {/* Product Cards Grid */}
         {filteredItems.length === 0 ? (
           <div className="text-center py-16 bg-blue-50/50 rounded-3xl border border-blue-100">
-            <p className="text-slate-500 text-base">No bakery items found matching your filter criteria.</p>
+            <p className="text-slate-500 text-base">No cake items found matching your filter criteria.</p>
             <button
               onClick={() => {
                 setActiveCategory('all');
                 setSearchQuery('');
-                setEgglessOnly(false);
               }}
               className="mt-4 text-xs font-bold text-blue-600 underline"
             >
@@ -137,21 +148,15 @@ export const MenuSection: React.FC = () => {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
 
-                    {/* Dietary Tag */}
-                    <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold shadow-xs flex items-center gap-1.5 border border-slate-100">
-                      <span
-                        className={`w-2 h-2 rounded-full ${
-                          item.isEggless ? 'bg-emerald-500' : 'bg-rose-500'
-                        }`}
-                      />
-                      <span className={item.isEggless ? 'text-emerald-800' : 'text-rose-800'}>
-                        {item.isEggless ? 'Eggless' : 'Contains Egg'}
-                      </span>
+                    {/* Dietary Indicator */}
+                    <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold shadow-xs flex items-center gap-1.5 border border-slate-200">
+                      <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                      <span className="text-emerald-950 font-bold">Egg & Eggless</span>
                     </div>
 
                     {/* Bestseller Badge */}
                     {item.isBestseller && (
-                      <div className="absolute top-3 left-28 bg-blue-600 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold shadow-xs">
+                      <div className="absolute top-3 right-14 bg-gradient-to-r from-amber-500 to-amber-600 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold shadow-xs">
                         ★ Popular
                       </div>
                     )}
@@ -159,7 +164,7 @@ export const MenuSection: React.FC = () => {
                     {/* Wishlist Heart Button */}
                     <button
                       onClick={() => toggleWishlist(item.id)}
-                      className={`absolute top-3 right-3 w-9 h-9 rounded-full flex items-center justify-center transition-all ${
+                      className={`absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center transition-all ${
                         isWishlisted
                           ? 'bg-rose-50 text-rose-500 shadow-md scale-110'
                           : 'bg-white/80 backdrop-blur-xs text-slate-400 hover:text-rose-500 hover:bg-white shadow-xs'
@@ -171,12 +176,12 @@ export const MenuSection: React.FC = () => {
                   </div>
 
                   {/* Card Content Area */}
-                  <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
+                  <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                     <div>
                       {/* Rating & Category */}
-                      <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
+                      <div className="flex items-center justify-between text-xs text-slate-500 mb-1.5">
                         <span className="uppercase tracking-wider font-bold text-[10px] text-blue-600">
-                          {item.category}
+                          {item.category.replace('-', ' ')}
                         </span>
                         <div className="flex items-center gap-1 text-amber-500 font-bold">
                           <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
@@ -196,27 +201,30 @@ export const MenuSection: React.FC = () => {
                       </p>
                     </div>
 
-                    {/* Weight Options Selector if available */}
-                    {item.weightOptions && (
-                      <div className="pt-2">
-                        <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-1">
-                          Portion Options:
-                        </label>
-                        <select
-                          value={selectedWeights[item.id] || item.weightOptions[0]}
-                          onChange={(e) =>
-                            setSelectedWeights({ ...selectedWeights, [item.id]: e.target.value })
-                          }
-                          className="w-full text-xs font-semibold bg-blue-50/60 border border-blue-100 rounded-lg px-2.5 py-1.5 text-blue-900 focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer"
-                        >
-                          {item.weightOptions.map((opt) => (
-                            <option key={opt} value={opt}>
-                              {opt}
-                            </option>
-                          ))}
-                        </select>
+                    {/* Pricing Grid (½kg & 1kg) */}
+                    <div className="pt-2 border-t border-slate-100">
+                      <div className="flex items-center justify-between bg-blue-50/60 p-2.5 rounded-2xl border border-blue-100">
+                        <div className="text-center flex-1 border-r border-blue-200/60 pr-2">
+                          <span className="text-[10px] text-slate-500 uppercase font-bold block">½ kg</span>
+                          <span className="text-sm font-extrabold text-blue-950">₹{item.priceHalfKg}</span>
+                        </div>
+                        <div className="text-center flex-1 pl-2">
+                          <span className="text-[10px] text-slate-500 uppercase font-bold block">1 kg</span>
+                          <span className="text-sm font-extrabold text-blue-600">₹{item.priceOneKg}</span>
+                        </div>
                       </div>
-                    )}
+
+                      {/* Notice footer on card */}
+                      <div className="mt-2 flex items-center justify-between text-[11px] text-slate-500 font-medium px-1">
+                        <span className="flex items-center gap-1 text-amber-800 font-semibold">
+                          <Clock className="w-3 h-3 text-amber-600" /> Order 1 day prior
+                        </span>
+                        <span className="text-emerald-700 font-semibold">
+                          Egg / Eggless
+                        </span>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               );
@@ -228,4 +236,3 @@ export const MenuSection: React.FC = () => {
     </section>
   );
 };
-

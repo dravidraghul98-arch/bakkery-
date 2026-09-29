@@ -5,12 +5,12 @@ export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Bread', href: '#bread' },
-    { name: 'Cakes', href: '#cakes' },
-    { name: 'Specialty Cakes', href: '#specialty' },
-    { name: 'Pastry', href: '#pastry' },
-    { name: 'Cookies', href: '#cookies' },
-    { name: 'Special Events', href: '#consultation' },
+    { name: 'Fresh Cream', href: '#menu' },
+    { name: 'Choco Treats', href: '#menu' },
+    { name: 'Fresh Cream Premium', href: '#menu' },
+    { name: 'Mousse & Gateaux', href: '#menu' },
+    { name: 'Cheesecake', href: '#menu' },
+    { name: 'Special Flavours', href: '#menu' },
     { name: 'Reviews', href: '#reviews' },
     { name: 'Contact', href: '#location' },
   ];

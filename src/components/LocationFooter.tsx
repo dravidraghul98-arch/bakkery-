@@ -40,7 +40,14 @@ export const LocationFooter: React.FC = () => {
                 <MapPin className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-white font-semibold block">Store Address:</strong>
-                  <span>15/3, Poonamallee Road, Ekkaduthangal, Chennai, Tamil Nadu 600032</span>
+                  <a
+                    href="https://www.google.com/maps/place/Bakkings+Elite/@13.0173861,80.2010112,15.28z/data=!4m14!1m7!3m6!1s0x3a52673cc00d944b:0x651b987970c148c2!2sBakkings+Elite!8m2!3d13.0211769!4d80.2049532!16s%2Fg%2F1ydddkrvm!3m5!1s0x3a52673cc00d944b:0x651b987970c148c2!8m2!3d13.0211769!4d80.2049532!16s%2Fg%2F1ydddkrvm?entry=ttu&g_ep=EgoyMDI2MDkyNy4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline hover:text-blue-300 transition-colors"
+                  >
+                    15/3, Poonamallee Road, Ekkaduthangal, Chennai, Tamil Nadu 600032
+                  </a>
                   <span className="text-xs text-blue-400 block mt-1 font-medium">
                     📍 (Near Ekkaduthangal Metro Corridor)
                   </span>
@@ -86,7 +93,7 @@ export const LocationFooter: React.FC = () => {
               </div>
 
               <a
-                href="https://maps.google.com/?q=15/3+Poonamallee+Road+Ekkaduthangal+Chennai"
+                href="https://www.google.com/maps/place/Bakkings+Elite/@13.0173861,80.2010112,15.28z/data=!4m14!1m7!3m6!1s0x3a52673cc00d944b:0x651b987970c148c2!2sBakkings+Elite!8m2!3d13.0211769!4d80.2049532!16s%2Fg%2F1ydddkrvm!3m5!1s0x3a52673cc00d944b:0x651b987970c148c2!8m2!3d13.0211769!4d80.2049532!16s%2Fg%2F1ydddkrvm?entry=ttu&g_ep=EgoyMDI2MDkyNy4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-3 w-full py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow-md"

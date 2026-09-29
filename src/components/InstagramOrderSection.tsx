@@ -44,11 +44,6 @@ export const InstagramOrderSection: React.FC = () => {
               <div>
                 <h3 className="font-serif text-xl font-bold text-slate-900">@bakkingselite</h3>
                 <p className="text-xs font-medium text-slate-500">Bakkings Elite Patisserie • Chennai</p>
-                <div className="flex items-center gap-3 text-xs font-semibold text-slate-700 mt-1.5">
-                  <span><strong>14.8k</strong> Followers</span>
-                  <span>•</span>
-                  <span><strong>482</strong> Posts</span>
-                </div>
               </div>
             </div>
 
