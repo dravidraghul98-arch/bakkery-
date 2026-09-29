@@ -1,4 +1,5 @@
 import type { MenuItem, Review, InstagramPost } from '../types';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export const MENU_ITEMS: MenuItem[] = [
   // 1. Fresh Cream
@@ -539,7 +540,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isBestseller: true,
     rating: 5.0,
     reviewsCount: 210,
-    image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800',
+    image: getAssetUrl('images/rasamalai_cake.png'),
     weightOptions: ['½ kg - ₹550', '1 kg - ₹1,050']
   },
   {
@@ -611,7 +612,7 @@ export const REVIEWS: Review[] = [
 export const INSTAGRAM_POSTS: InstagramPost[] = [
   {
     id: '1',
-    imageUrl: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800',
+    imageUrl: getAssetUrl('images/rasamalai_cake.png'),
     likes: '2.4k',
     comments: '184',
     caption: 'Our signature Rasamalai Cake! ✨ Order 1 day in advance. Available in Egg & Eggless for all flavors!',
