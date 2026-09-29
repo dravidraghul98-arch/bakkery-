@@ -16,7 +16,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isBestseller: true,
     rating: 4.9,
     reviewsCount: 88,
-    image: 'https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&q=80&w=800',
+    image: getAssetUrl('images/vanilla_fresh_cream.jpg'),
     weightOptions: ['½ kg - ₹400', '1 kg - ₹780']
   },
   {
@@ -141,7 +141,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isBestseller: true,
     rating: 5.0,
     reviewsCount: 215,
-    image: 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&q=80&w=800',
+    image: getAssetUrl('images/chocolate_truffle.jpg'),
     weightOptions: ['½ kg - ₹475', '1 kg - ₹900']
   },
   {
@@ -171,7 +171,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isEggless: true,
     rating: 4.8,
     reviewsCount: 89,
-    image: 'https://images.unsplash.com/photo-1582293041079-7814c2f12063?auto=format&fit=crop&q=80&w=800',
+    image: getAssetUrl('images/choco_nuts.jpg'),
     weightOptions: ['½ kg - ₹475', '1 kg - ₹900']
   },
   {
@@ -220,7 +220,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isBestseller: true,
     rating: 4.9,
     reviewsCount: 130,
-    image: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&q=80&w=800',
+    image: getAssetUrl('images/white_forest.jpg'),
     weightOptions: ['½ kg - ₹425', '1 kg - ₹850']
   },
   {
@@ -235,7 +235,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isEggless: true,
     rating: 4.8,
     reviewsCount: 77,
-    image: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&q=80&w=800',
+    image: getAssetUrl('images/pista_premium.jpg'),
     weightOptions: ['½ kg - ₹425', '1 kg - ₹850']
   },
   {
@@ -265,7 +265,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isEggless: true,
     rating: 4.8,
     reviewsCount: 84,
-    image: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&q=80&w=800',
+    image: getAssetUrl('images/italian_cassatta.jpg'),
     weightOptions: ['½ kg - ₹425', '1 kg - ₹850']
   },
   {
@@ -280,7 +280,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isEggless: true,
     rating: 4.9,
     reviewsCount: 91,
-    image: 'https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&q=80&w=800',
+    image: getAssetUrl('images/almond_honey.jpg'),
     weightOptions: ['½ kg - ₹425', '1 kg - ₹850']
   },
 
@@ -298,7 +298,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isBestseller: true,
     rating: 5.0,
     reviewsCount: 156,
-    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=800',
+    image: getAssetUrl('images/chocolate_mousse.jpg'),
     weightOptions: ['½ kg - ₹475', '1 kg - ₹900']
   },
   {
@@ -313,7 +313,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isEggless: true,
     rating: 4.8,
     reviewsCount: 72,
-    image: 'https://images.unsplash.com/photo-1543508282-6319a3e2621f?auto=format&fit=crop&q=80&w=800',
+    image: getAssetUrl('images/strawberry_mousse.jpg'),
     weightOptions: ['½ kg - ₹475', '1 kg - ₹900']
   },
   {
@@ -328,7 +328,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isEggless: true,
     rating: 4.9,
     reviewsCount: 88,
-    image: 'https://images.unsplash.com/photo-1514517604298-cf80e0fb7f1e?auto=format&fit=crop&q=80&w=800',
+    image: getAssetUrl('images/blueberry_mousse.jpg'),
     weightOptions: ['½ kg - ₹475', '1 kg - ₹900']
   },
 
@@ -346,7 +346,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isBestseller: true,
     rating: 5.0,
     reviewsCount: 118,
-    image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&q=80&w=800',
+    image: getAssetUrl('images/blueberry_gateaux.jpg'),
     weightOptions: ['½ kg - ₹475', '1 kg - ₹950']
   },
   {
@@ -361,7 +361,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isEggless: true,
     rating: 4.9,
     reviewsCount: 65,
-    image: 'https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&q=80&w=800',
+    image: getAssetUrl('images/strawberry_gateaux.jpg'),
     weightOptions: ['½ kg - ₹475', '1 kg - ₹950']
   },
   {
@@ -376,7 +376,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isEggless: true,
     rating: 4.8,
     reviewsCount: 49,
-    image: 'https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&q=80&w=800',
+    image: getAssetUrl('images/kiwi_gateaux.jpg'),
     weightOptions: ['½ kg - ₹475', '1 kg - ₹950']
   },
   {
@@ -391,7 +391,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isEggless: true,
     rating: 4.9,
     reviewsCount: 82,
-    image: 'https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&q=80&w=800',
+    image: getAssetUrl('images/black_current_gateaux.jpg'),
     weightOptions: ['½ kg - ₹475', '1 kg - ₹950']
   },
 
@@ -409,7 +409,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isBestseller: true,
     rating: 5.0,
     reviewsCount: 134,
-    image: 'https://images.unsplash.com/photo-1548848221-0c2e497ed557?auto=format&fit=crop&q=80&w=800',
+    image: getAssetUrl('images/german_black_forest.jpg'),
     weightOptions: ['½ kg - ₹475', '1 kg - ₹990']
   },
   {
@@ -424,7 +424,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isEggless: true,
     rating: 4.8,
     reviewsCount: 56,
-    image: 'https://images.unsplash.com/photo-1534432182912-63863115e106?auto=format&fit=crop&q=80&w=800',
+    image: getAssetUrl('images/choco_pineapple.jpg'),
     weightOptions: ['½ kg - ₹475', '1 kg - ₹990']
   },
   {
@@ -439,7 +439,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isEggless: true,
     rating: 4.9,
     reviewsCount: 97,
-    image: 'https://images.unsplash.com/photo-1515037893149-de7f840978e2?auto=format&fit=crop&q=80&w=800',
+    image: getAssetUrl('images/blueberry_white_forest.jpg'),
     weightOptions: ['½ kg - ₹475', '1 kg - ₹990']
   },
   {
@@ -454,7 +454,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isEggless: true,
     rating: 4.9,
     reviewsCount: 112,
-    image: 'https://images.unsplash.com/photo-1519340333755-56e9c1d04579?auto=format&fit=crop&q=80&w=800',
+    image: getAssetUrl('images/mix_fruit_delight.jpg'),
     weightOptions: ['½ kg - ₹475', '1 kg - ₹990']
   },
 
@@ -489,7 +489,7 @@ export const MENU_ITEMS: MenuItem[] = [
     requiresAdvanceOrder: true,
     rating: 4.9,
     reviewsCount: 94,
-    image: 'https://images.unsplash.com/photo-1567327613485-f379af801b7a?auto=format&fit=crop&q=80&w=800',
+    image: getAssetUrl('images/strawberry_cheesecake.jpg'),
     weightOptions: ['½ kg - ₹550', '1 kg - ₹1,050']
   },
   {
@@ -506,7 +506,7 @@ export const MENU_ITEMS: MenuItem[] = [
     requiresAdvanceOrder: true,
     rating: 5.0,
     reviewsCount: 140,
-    image: 'https://images.unsplash.com/photo-1586788680404-329d236070fa?auto=format&fit=crop&q=80&w=800',
+    image: getAssetUrl('images/red_velvet_cheesecake.jpg'),
     weightOptions: ['½ kg - ₹550', '1 kg - ₹1,050']
   },
   {
@@ -522,7 +522,7 @@ export const MENU_ITEMS: MenuItem[] = [
     requiresAdvanceOrder: true,
     rating: 4.8,
     reviewsCount: 68,
-    image: 'https://images.unsplash.com/photo-1525140399135-e879774b7796?auto=format&fit=crop&q=80&w=800',
+    image: getAssetUrl('images/lemon_cheesecake.jpg'),
     weightOptions: ['½ kg - ₹550', '1 kg - ₹1,050']
   },
 
@@ -556,7 +556,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isBestseller: true,
     rating: 4.9,
     reviewsCount: 165,
-    image: 'https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&q=80&w=800',
+    image: getAssetUrl('images/gulab_jamun_cake.jpg'),
     weightOptions: ['½ kg - ₹550', '1 kg - ₹1,050']
   },
   {
