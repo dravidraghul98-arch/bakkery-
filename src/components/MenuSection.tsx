@@ -57,27 +57,24 @@ export const MenuSection: React.FC = () => {
         </div>
 
         {/* Global Notice Banner */}
-        <div className="mb-10 max-w-4xl mx-auto bg-gradient-to-r from-amber-500/10 via-blue-500/10 to-emerald-500/10 border border-blue-200/80 rounded-2xl p-4 sm:p-5 shadow-sm text-center flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mb-10 max-w-4xl mx-auto bg-gradient-to-r from-blue-50 via-indigo-50/60 to-emerald-50 border border-blue-200/80 rounded-2xl p-4 sm:p-5 shadow-xs text-center flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3 text-left">
             <div className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold shrink-0 shadow-md">
               🎂
             </div>
             <div>
               <h4 className="font-serif text-sm font-bold text-blue-950 flex items-center gap-2">
-                Important Ordering Information
+                Freshly Baked Daily
               </h4>
               <p className="text-xs text-slate-600 font-medium mt-0.5">
-                Kindly place your cake orders <strong>1 day in advance</strong>. Both <strong>Egg & Eggless</strong> options are available for <strong>ALL flavors!</strong>
+                Both <strong>Egg & Eggless</strong> options are available for <strong>ALL flavors!</strong> *(Cheesecakes require 1 day advance order)*.
               </p>
             </div>
           </div>
 
           <div className="flex items-center gap-2 shrink-0">
-            <span className="bg-emerald-100 text-emerald-900 border border-emerald-300 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
-              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> Egg & Eggless
-            </span>
-            <span className="bg-amber-100 text-amber-900 border border-amber-300 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
-              <Clock className="w-3.5 h-3.5 text-amber-600" /> 1 Day Advance
+            <span className="bg-emerald-100 text-emerald-900 border border-emerald-300 px-3.5 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Both Egg & Eggless Available
             </span>
           </div>
         </div>
@@ -119,7 +116,7 @@ export const MenuSection: React.FC = () => {
         {/* Product Cards Grid */}
         {filteredItems.length === 0 ? (
           <div className="text-center py-16 bg-blue-50/50 rounded-3xl border border-blue-100">
-            <p className="text-slate-500 text-base">No cake items found matching your filter criteria.</p>
+            <p className="text-slate-500 text-base">No cake items found matching your search criteria.</p>
             <button
               onClick={() => {
                 setActiveCategory('all');
@@ -149,10 +146,17 @@ export const MenuSection: React.FC = () => {
                     />
 
                     {/* Dietary Indicator */}
-                    <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold shadow-xs flex items-center gap-1.5 border border-slate-200">
+                    <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold shadow-xs flex items-center gap-1.5 border border-slate-200">
                       <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                       <span className="text-emerald-950 font-bold">Egg & Eggless</span>
                     </div>
+
+                    {/* Advance Order Badge (Only for Cheesecake / items requiring advance order) */}
+                    {item.requiresAdvanceOrder && (
+                      <div className="absolute bottom-3 left-3 bg-amber-500/90 text-white backdrop-blur-md px-2.5 py-0.5 rounded-full text-[10px] font-bold shadow-xs flex items-center gap-1">
+                        <Clock className="w-3 h-3 text-white" /> Order 1 day in advance
+                      </div>
+                    )}
 
                     {/* Bestseller Badge */}
                     {item.isBestseller && (
@@ -212,16 +216,6 @@ export const MenuSection: React.FC = () => {
                           <span className="text-[10px] text-slate-500 uppercase font-bold block">1 kg</span>
                           <span className="text-sm font-extrabold text-blue-600">₹{item.priceOneKg}</span>
                         </div>
-                      </div>
-
-                      {/* Notice footer on card */}
-                      <div className="mt-2 flex items-center justify-between text-[11px] text-slate-500 font-medium px-1">
-                        <span className="flex items-center gap-1 text-amber-800 font-semibold">
-                          <Clock className="w-3 h-3 text-amber-600" /> Order 1 day prior
-                        </span>
-                        <span className="text-emerald-700 font-semibold">
-                          Egg / Eggless
-                        </span>
                       </div>
                     </div>
 
