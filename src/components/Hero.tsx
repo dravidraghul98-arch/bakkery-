@@ -7,28 +7,25 @@ export const Hero: React.FC = () => {
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         
         {/* Banner Container matching reference image framing */}
-        <div className="relative w-full overflow-hidden shadow-sm">
+        <div className="relative w-full overflow-hidden shadow-sm bg-white">
           
-          {/* Main Showcase Banner Image */}
-          <div className="relative w-full h-[320px] sm:h-[460px] md:h-[560px] lg:h-[620px] bg-white">
+          {/* Main Showcase Banner Image preserving exact 814/301 aspect ratio */}
+          <div className="relative w-full aspect-[814/301]">
             <img
               src={getAssetUrl('images/hero.png')}
               alt="Bakkings Elite Luxury Blue and White Bakery Display"
               className="w-full h-full object-cover object-center"
             />
 
-
-
-            {/* Bottom-left Pill Button Overlay - Exactly matching reference image */}
-            <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10">
-              <a
-                href="#menu"
-                className="inline-block bg-white text-[#1C3659] border border-[#1C3659] hover:bg-slate-50 font-medium px-7 py-3 rounded-full shadow-md text-sm sm:text-base transition-colors"
-              >
-                Explore Menu
-              </a>
-            </div>
-
+            {/* Clickable overlay link over bottom-left 'Explore Menu' button */}
+            <a
+              href="#menu"
+              className="absolute bottom-[6%] left-[2.5%] w-[21%] h-[26%] rounded-full cursor-pointer z-10 transition-transform active:scale-95"
+              aria-label="Explore Menu"
+              title="Explore Menu"
+            >
+              <span className="sr-only">Explore Menu</span>
+            </a>
           </div>
 
         </div>
@@ -37,4 +34,5 @@ export const Hero: React.FC = () => {
     </section>
   );
 };
+
 
